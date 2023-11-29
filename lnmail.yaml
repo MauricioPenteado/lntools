@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  lnmail:
+    image: lnmail
+    build:
+      context: .
+      dockerfile: lnmail/Dockerfile
+    container_name: lnmail
+    ports:
+      - "1080:80"
+      - "25:25"
+      - "143:143"
